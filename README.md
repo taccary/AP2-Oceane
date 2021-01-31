@@ -1,2 +1,5 @@
-# AP2-Oceane
-Début d'application back-office de gestion des données de la Compagnie Océane (AP SIO1 semestre 2)
+# back-office Océane
+
+Copier le contenu du dossier sous votre repertoire web dans /oceane
+
+Pour créer la BDD : importer le fichier BDD/bateau.sql

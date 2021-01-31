@@ -1,45 +1,7 @@
 ﻿<?php
 	session_start();
 	include_once('BDD/connectBdd.php');
-	
-	if(isset($_POST['add'])){
-		$nom = $_POST['nom'];
 
-		$sql = "INSERT INTO bateau (nom) VALUES ('$nom')";
-		if($connexion->query($sql)){
-			$_SESSION['success'] = 'Bateau ajouté';
-		}
-		else{
-			$_SESSION['error'] = 'Problème lors de l\'ajout du bateau';
-		}
-		header('location: index.php?action=modifieBateau');
-	}
-	
-	if(isset($_POST['edit'])){
-		$id = $_POST['id'];
-		$nom = $_POST['nom'];
-		$sql = "UPDATE bateau SET nom = '$nom' WHERE id = '$id'";
-		if($connexion->query($sql)){
-			$_SESSION['success'] = 'Bateau modifié';
-		}		
-		else{
-			$_SESSION['error'] = 'Problème lors de la modification du bateau';
-		}
-		header('location: index.php?action=modifieBateau');
-	}
-	
-	if(isset($_POST['supr'])){
-		$id = $_POST['id'];
-		$sql = "DELETE FROM bateau WHERE id = '".$id."'";
-
-		if($connexion->query($sql)){
-			$_SESSION['success'] = 'Bateau supprimé';
-		}		
-		else{
-			$_SESSION['error'] = 'Problème lors de la suppression du bateau';
-		}
-		header('location: index.php?action=modifieBateau');
-	}
 ?>
 	
 <h1 class="page-header text-center">CRUD Bateaux</h1>

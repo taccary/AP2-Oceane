@@ -28,6 +28,10 @@
 			case ("modifieBateau"):
 				$affiche = "crudBateau.php";
 				break;
+			case ("bateauTraitement"):
+				$affiche = "crudBateau/crudBateauTraitement.php";
+				break;	
+				
 			default:
 				$affiche = "lostinspace.php";
 		}			
